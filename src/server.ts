@@ -27,8 +27,8 @@ app.listen(PORT, async () => {
     .then(async () => {
       await server.start().then(() => {
         app.use("/graphql", cors, expressMiddleware(server));
-        app.listen(5000);
-        console.log(chalk.bgGreen(`http://localhost:5000/graphql`));
+        app.listen(4000);
+        console.log(chalk.bgGreen(`http://localhost:4000/graphql`));
       });
     })
     .catch((error) =>

@@ -5,7 +5,9 @@ const shippingDetailsSchema = Joi.object<ShippingDetailsInterface>({
   address: Joi.string().required(),
   contactNumber: Joi.string().required(),
   userId: Joi.string().required(),
-  orderType: Joi.string().valid("standard", "express", "pickup").required(),
+  registerOrderType: Joi.string()
+    .valid("STANDARD", "EXPRESS", "PICKUP")
+    .required(),
 });
 
 export default shippingDetailsSchema;

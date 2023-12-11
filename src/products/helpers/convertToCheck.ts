@@ -7,12 +7,10 @@ export type productToCheck = {
 };
 
 export const convertToCheck = (cart: productToCheck[]) => {
-  const converted = [
-    {
-      productId: cart[0].product.id,
-      requiredQuantity: cart[0].requiredQuantity,
-    },
-  ];
-
-  return converted;
+  return cart.map((item) => {
+    return {
+      productId: item.product.id,
+      requiredQuantity: item.requiredQuantity,
+    };
+  });
 };
